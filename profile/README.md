@@ -1,12 +1,21 @@
-## Hi there 👋
+# Styx API Generator
 
-<!--
+**Create type-safe wrappers for command line tools**
 
-**Here are some ideas to get you started:**
+Transform any command-line tool into a type-safe programming interface. Originally built for neuroimaging research, Styx generates Python, TypeScript, and R bindings from structured tool descriptions.
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+## Key Projects
+
+🧠 **[niwrap](https://github.com/styx-api/niwrap)** - Modern neuroimaging made simple  
+🔧 **[styx](https://github.com/styx-api/styx)** - Core compiler for generating tool wrappers  
+📚 **[styxbook](https://github.com/styx-api/styxbook)** - Complete documentation and guides  
+
+## Quick Start
+
+```python
+# Instead of: bet input.nii output.nii -f 0.5 -m
+from niwrap import fsl
+outputs = fsl.bet(infile="input.nii", fractional_intensity=0.5, mask=True)
+```
+
+**[📖 Read the docs](https://styx-api.github.io/styxbook/)** • **[🐛 Report issues](https://github.com/styx-api/niwrap/issues)** • **[💬 Get help](https://github.com/styx-api/niwrap/discussions)**
